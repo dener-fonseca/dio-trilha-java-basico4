@@ -1,5 +1,7 @@
 package src.conta;
 
+import src.cliente.Cliente;
+
 public class ContaCorrente extends Conta {
 
 	public ContaCorrente(Cliente cliente) {

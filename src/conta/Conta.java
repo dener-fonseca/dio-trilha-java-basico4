@@ -1,5 +1,7 @@
 package src.conta;
 
+import src.cliente.Cliente;
+
 public abstract class Conta implements InterfaceConta {
 	
 	private static final int AGENCIA_PADRAO = 1;

@@ -1,6 +1,7 @@
 package src.banco;
 
 import java.util.List;
+import src.conta.Conta;
 
 public class Banco {
 
