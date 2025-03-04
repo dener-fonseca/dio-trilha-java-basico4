@@ -22,16 +22,22 @@ public class Main {
 		
 		Cliente john = new Cliente();
 		john.setNome("John Smith");
+	  john.setCpf("111.111.111-11");	
 		
-		Conta corrente = new ContaCorrente(john);
+		Cliente jane = new Cliente();
+		jane.setNome("Jane Doe");
+		jane.setCpf("222.222.222-22");
 		
-		Conta poupanca = new ContaPoupanca(john);
+		
+		Conta johncorrente = new ContaCorrente(john);
+		
+		Conta johnpoupanca = new ContaPoupanca(john);
 
-		corrente.depositar(100);
-		corrente.transferir(100, poupanca);
+		johncorrente.depositar(100);
+		johncorrente.transferir(100, johnpoupanca);
 		
-		corrente.imprimirExtrato();
-		poupanca.imprimirExtrato();
+		johncorrente.imprimirExtrato();
+		johnpoupanca.imprimirExtrato();
 	}
 
 }

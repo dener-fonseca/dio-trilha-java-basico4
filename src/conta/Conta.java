@@ -1,4 +1,4 @@
-package src.conta;
+:package src.conta;
 
 import src.cliente.Cliente;
 
@@ -46,8 +46,10 @@ public abstract class Conta implements InterfaceConta {
 		return saldo;
 	}
 
-	protected void imprimirInfosComuns() {
+	protected void imprimirInformacoes() {
 		System.out.println(String.format("Titular: %s", this.cliente.getNome()));
+
+System.out.println(String.format("CPF: %s", this.cliente.getCpf()));
 		System.out.println(String.format("Agencia: %d", this.agencia));
 		System.out.println(String.format("Numero: %d", this.numero));
 		System.out.println(String.format("Saldo: %.2f", this.saldo));
