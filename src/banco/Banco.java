@@ -3,27 +3,30 @@ package src.banco;
 import src.conta.Conta;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Banco {
 
+	//Atributos nome e lista de clientes
 	private String nome;
-	
-	private List<Conta> contas;
+	private List<Cliente> clientes;
 
-	public String getNome() {
-		return nome;
+	//Construtor que recebe nome e lista de clientes
+	public Banco(String nome) {
+        this.nome = nome;
+        this.clientes = new ArrayList<>();
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	//Metodo que adiciona um cliente na lista de clientes
+	public void adicionarCliente(Cliente cliente) {
+        clientes.add(cliente);
 	}
 
-	public List<Conta> getContas() {
-		return contas;
-	}
-
-	public void setConta(List<Conta> contas) {
-		this.contas = contas;
-	}
+	//Metodo para imprimir os clientes
+	public void imprimirClientes() {
+        System.out.println("Clientes do Banco " + nome + ":");
+        for (Cliente cliente : clientes) {
+            System.out.println("- " + cliente.getNome() + " (CPF: " + cliente.getCpf() + ")");
+				}
 
 }

@@ -2,24 +2,24 @@ package src.cliente;
 
 public class Cliente {
 
+	//Atributos nome e cpf
 	private String nome;
+  private String cpf;
 
-	private String cpf;
+	//Construtor que recebe nome e cpf
+	public Cliente(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+	}
 
+	//Getter de nome
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCpf() {
+	//Setter de nome
+	public String setCpf() {
 		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
 	}
 
 }

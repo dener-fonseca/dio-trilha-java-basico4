@@ -19,25 +19,34 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Cliente john = new Cliente();
-		john.setNome("John Smith");
-	  john.setCpf("111.111.111-11");	
-		
-		Cliente jane = new Cliente();
-		jane.setNome("Jane Doe");
-		jane.setCpf("222.222.222-22");
-		
-		
-		Conta johncorrente = new ContaCorrente(john);
-		
-		Conta johnpoupanca = new ContaPoupanca(john);
 
-		johncorrente.depositar(100);
-		johncorrente.transferir(100, johnpoupanca);
+		Banco banco = new Banco("Banco Central");
 		
-		johncorrente.imprimirExtrato();
-		johnpoupanca.imprimirExtrato();
+		Cliente john = new Cliente("John Smith","111.111.111-11");	
+		
+		Cliente jane = new Cliente("Jane Doe", "222.222.222-22");
+
+		banco.adicionarCliente(john);
+  
+		banco.adicionarCliente(jane);
+
+		ContaCorrente contaCorrenteJohn = new ContaCorrente("001", "12345", john, 500.0);
+    
+		ContaPoupanca contaPoupancaJane = new ContaPoupanca("001", "54321", jane, 3.0);
+		
+
+contaCorrenteJohn.depositar(1000.0);
+  
+		contaPoupancaJane.depositar(500.0);
+
+		contaCorrenteJohn.sacar(200.0);
+
+		contaPoupancaJane.aplicarJuros();
+		contaCorrenteJohn.transferir(100.0, contaPoupancaJane);
+
+	banco.imprimirClientes();
+        contaCorrenteJohn.imprimirInformacoes();
+        contaPoupancaJane.imprimirInformacoes();
 	}
-
+		
 }
