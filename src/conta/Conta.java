@@ -46,7 +46,7 @@ public abstract class Conta implements InterfaceConta {
 		if (saldo >= valor) {
 			saldo -= valor;
 		  contaDestino.depositar(valor);
-    System.out.println("Transferência de R$ " + valor + " realizada com sucesso.")
+    System.out.println("Transferência de R$ " + valor + " realizada com sucesso.");
 	  }
 		
 		else {

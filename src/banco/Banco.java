@@ -28,5 +28,5 @@ public class Banco {
         for (Cliente cliente : clientes) {
             System.out.println("- " + cliente.getNome() + " (CPF: " + cliente.getCpf() + ")");
 				}
-
+	}
 }
