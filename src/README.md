@@ -41,7 +41,7 @@ Impressão de Informações: O sistema imprime as informações dos clientes e c
 
 A estrutura do projeto está organizada da seguinte forma:
 
-BancoProjeto/
+dio-trilha-java-basico4/
 │── src/
 │   ├── banco/
 │   │   ├── Banco.java
