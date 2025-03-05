@@ -17,8 +17,8 @@ public class Cliente {
 		return nome;
 	}
 
-	//Setter de nome
-	public String setCpf() {
+	//Getter de cpf
+	public String getCpf() {
 		return cpf;
 	}
 

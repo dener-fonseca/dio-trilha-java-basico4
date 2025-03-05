@@ -18,7 +18,7 @@ public abstract class Conta implements InterfaceConta {
         this.saldo = 0.0;
 	}
 
-	//Metodo que retorna o saldo
+	//Metodo que saca um valor
 	@Override
 	public void sacar(double valor) {
 		
