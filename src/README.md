@@ -88,7 +88,7 @@ Passos para rodar o projeto
 
 Se você estiver usando o Git:
 
-git clone https://github.com/Dener-Fonseca/dio-trilha-java-basico4
+git clone https://github.com/Dener-Fonseca/dio-trilha-java-basico4.git
 
 
 2. Navegue até o diretório do projeto:
